@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">DataAdder</string>
-    <string name="least_people">最少人數(請打數字 ex:2)</string>
+    <string name="least_people">最少人數(請打數字ex:2)</string>
     <string name="difficulty">訓練難度(低中高)</string>
     <string name="name">訓練名稱</string>
     <string name="type">訓練種類(ex.扣球)</string>
