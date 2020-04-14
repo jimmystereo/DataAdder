@@ -27,16 +27,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void submit(View view){
-        EditText number,type,name,difficulty,least_people,people_per_ball,other;
+        final EditText number,type,name,difficulty,least_people,ball_per_people,other,amount_people,amount_ball;
         Map<String,Object> start_training_list = new HashMap<>();
         number = (EditText) findViewById(R.id.number);
         type = (EditText) findViewById(R.id.type);
         name = (EditText) findViewById(R.id.name);
         difficulty = (EditText) findViewById(R.id.difficulty);
         least_people = (EditText) findViewById(R.id.least_people);
-        people_per_ball = (EditText) findViewById(R.id.people_per_ball);
+        ball_per_people = (EditText) findViewById(R.id.people_per_ball);
         other = (EditText) findViewById(R.id.other);
-        if (type.getText().equals("")||name.getText().equals("")||difficulty.getText().equals("")||least_people.getText().equals("")||people_per_ball.getText().equals("")||other.getText().equals("")){
+        amount_ball = (EditText) findViewById(R.id.amount_ball);
+        amount_people = (EditText) findViewById(R.id.amount_people);
+        if (type.getText().equals("")||name.getText().equals("")||difficulty.getText().equals("")||least_people.getText().equals("")||ball_per_people.getText().equals("")||other.getText().equals("")){
             Toast.makeText(MainActivity.this, "please leave no blank", Toast.LENGTH_SHORT).show();
         }
         else{start_training_list.put("type",type.getText().toString().trim());
@@ -44,13 +46,19 @@ public class MainActivity extends AppCompatActivity {
         start_training_list.put("name",name.getText().toString().trim());
         start_training_list.put("difficulty",difficulty.getText().toString().trim());
         start_training_list.put("least_people",least_people.getText().toString().trim());
-        start_training_list.put("ball_per_people",people_per_ball.getText().toString().trim());
+        start_training_list.put("ball_per_people",ball_per_people.getText().toString().trim());
         start_training_list.put("other",other.getText().toString().trim());
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        start_training_list.put("amount_people",amount_people.getText().toString().trim());
+        start_training_list.put("amount_ball",amount_ball.getText().toString().trim());
+        final FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("start_training_list").add(start_training_list).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Toast.makeText(MainActivity.this, "upload success", Toast.LENGTH_SHORT).show();
+                number.setText("");name.setText("");amount_ball.setText("");amount_people.setText("");
+                type.setText("");other.setText("");least_people.setText("");ball_per_people.setText("");
+                difficulty.setText("");
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

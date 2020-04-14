@@ -55,47 +55,40 @@
     <EditText
 
         android:id="@+id/least_people"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="99dp"
+        android:layout_width="149dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/least_people"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/difficulty" />
 
     <EditText
-        android:id="@+id/people_per_ball"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="99dp"
+        android:id="@+id/ball_per_people"
+        android:layout_width="149dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="@string/people_per_ball"
+        android:hint="@string/ball_per_people"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/least_people" />
 
     <EditText
         android:id="@+id/other"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="112dp"
         android:ems="10"
         android:hint="@string/other"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/people_per_ball"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button"
@@ -111,15 +104,16 @@
 
     <EditText
         android:id="@+id/number"
-        android:layout_width="wrap_content"
+        android:layout_width="213dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="99dp"
         android:ems="10"
         android:hint="@string/number"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -127,11 +121,38 @@
         android:id="@+id/textView"
         android:layout_width="200dp"
         android:layout_height="21dp"
+        android:layout_marginBottom="68dp"
         android:text="@string/float_warning"
         app:layout_constraintBottom_toTopOf="@+id/other"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/people_per_ball"
+        app:layout_constraintTop_toBottomOf="@+id/ball_per_people"
         app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/amount_people"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="@string/amount_people"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/people_per_ball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficulty" />
+
+    <EditText
+        android:id="@+id/amount_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/amount_ball"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_people" />
 </androidx.constraintlayout.widget.ConstraintLayout>
