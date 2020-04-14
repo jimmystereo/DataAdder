@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         name = (EditText) findViewById(R.id.name);
         difficulty = (EditText) findViewById(R.id.difficulty);
         least_people = (EditText) findViewById(R.id.least_people);
-        ball_per_people = (EditText) findViewById(R.id.people_per_ball);
+        ball_per_people = (EditText) findViewById(R.id.ball_per_people);
         other = (EditText) findViewById(R.id.other);
         amount_ball = (EditText) findViewById(R.id.amount_ball);
         amount_people = (EditText) findViewById(R.id.amount_people);

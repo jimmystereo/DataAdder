@@ -76,7 +76,7 @@
         android:hint="@string/ball_per_people"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/least_people" />
+        app:layout_constraintTop_toBottomOf="@id/least_people" />
 
     <EditText
         android:id="@+id/other"
@@ -86,7 +86,7 @@
         android:ems="10"
         android:hint="@string/other"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -127,7 +127,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ball_per_people"
+        app:layout_constraintTop_toBottomOf="@id/ball_per_people"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -140,9 +140,9 @@
         android:ems="10"
         android:hint="@string/amount_people"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/people_per_ball"
+        app:layout_constraintBottom_toTopOf="@id/ball_per_people"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/difficulty" />
+        app:layout_constraintTop_toBottomOf="@id/difficulty" />
 
     <EditText
         android:id="@+id/amount_ball"
@@ -154,5 +154,5 @@
         android:hint="@string/amount_ball"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amount_people" />
+        app:layout_constraintTop_toBottomOf="@id/amount_people" />
 </androidx.constraintlayout.widget.ConstraintLayout>

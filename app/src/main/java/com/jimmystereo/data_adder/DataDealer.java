@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DataDealer extends AppCompatActivity {
-    public boolean checkData(){
+    /*public boolean checkData(){
         EditText type,name,difficulty,least_people,people_per_ball,other;
         type = (EditText) findViewById(R.id.type);
         name = (EditText) findViewById(R.id.name);
@@ -41,5 +41,5 @@ public class DataDealer extends AppCompatActivity {
         }
 
         return true;
-    }
+    }**/
     }
