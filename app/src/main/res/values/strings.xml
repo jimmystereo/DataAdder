@@ -5,7 +5,7 @@
     <string name="name">訓練名稱</string>
     <string name="type">訓練種類(ex.扣球)</string>
     <string name="other">其他要求(若沒有請打無)</string>
-    <string name="ball_per_people">人數/球數 </string>
+    <string name="ball_per_people">球數/人數 </string>
     <string name="float_warning">(若除不盡請取到小數點後兩位)</string>
     <string name="submit">送出</string>
     <string name="number">編號(ex: 12–1)</string>
